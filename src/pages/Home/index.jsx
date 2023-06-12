@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; //criando um estado, utilizando quando quando queremos usar o conteúdo de uma variavel na interface.
+import React, { useState, useEffect } from 'react'; //criando um estado, utilizando quando quando queremos usar o conteúdo de uma variavel na interface.
 
 import './style.css';
 
@@ -22,10 +22,21 @@ export function Home() {
 
     }
 
+    useEffect(() => {
+        console.log("useEffect foi chamado!")
+
+    }, []);
+
     return(
         <div className='container'>
-        <h1> Lista de Presença </h1>
-
+        <header>
+            <h1> Lista de Presença </h1>
+            <div>
+                <strong>Alanna</strong>
+                <img src='https://github.com/AlannaaSilva.png' alt='foto de perfil' />
+            </div>
+        </header>
+        
         <input
          type="text"
         placeholder="Digite um nome..."
